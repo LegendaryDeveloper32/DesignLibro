@@ -1,0 +1,32 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "**",
+        "function": "node"
+      },
+      {
+        "source": "**",
+        "function": "redirect"
+      },
+      {
+        "source": "**",
+        "function": "token"
+      },
+      {
+        "source": "**",
+        "function": "addFirestoreDataToAlgolia"
+      }
+    ]
+  }
+}
